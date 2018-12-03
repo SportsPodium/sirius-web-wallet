@@ -55,7 +55,7 @@
     "rimraf": "^2.6.0",
     "semver": "^5.5.0",
     "shelljs": "^0.7.6",
-    "siriusjs-lib": "^0.0.7",
+    "siriusjs-lib": "^0.0.8",
     "store": "^2.0.12",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.8",
