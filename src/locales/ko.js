@@ -7,7 +7,7 @@ export default {
     next: '다음',
     question_mark: '? ',
     testnet: 'Testnet',
-    mainnet: 'Ignition-Mainnet',
+    mainnet: 'Mainnet',
     menu: {
       create: '새 지갑 생성',
       create_from_mnemonic: '니모닉에서 생성',

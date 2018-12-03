@@ -8,11 +8,11 @@ let insightDomain = ''
 switch (config.getNetwork()) {
   case 'testnet':
     domain = 'http://siriusexplorer.io/'
-    insightDomain = 'zacanbot.hopto.org'
+    insightDomain = 'http://zacanbot.hopto.org'
     break
   case 'mainnet':
     domain = 'http://siriusexplorer.io/'
-    insightDomain = 'zacanbot.hopto.org'
+    insightDomain = 'http://zacanbot.hopto.org'
     break
 }
 const apiPrefix = insightDomain + '/sirius-insight-api'
