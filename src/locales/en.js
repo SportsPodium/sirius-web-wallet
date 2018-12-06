@@ -19,7 +19,7 @@ export default {
       view: 'View Wallet Info',
       dump_as_key_file: 'Dump As Key File',
       transactions: 'View Wallet Txs',
-      safe_send: 'Safe Send',
+      // safe_send: 'Safe Send',
       send: 'Send',
       request_payment: 'Request Payment',
       create_token: 'Create Token',

@@ -43,7 +43,7 @@
               <!-- <restore-ledger @restored="setWallet" v-if="isCurrent['restore_from_ledger']"></restore-ledger> -->
               <view-wallet :view="isCurrent['view']" v-if="isCurrent['view']"></view-wallet>
               <view-tx :view="isCurrent['transactions']" v-if="isCurrent['transactions']"></view-tx>
-              <safe-send @send="setWallet" v-if="isCurrent['safe_send']"></safe-send>
+              <!-- <safe-send @send="setWallet" v-if="isCurrent['safe_send']"></safe-send> -->
               <send @send="setWallet" v-if="isCurrent['send']"></send>
               <request-payment v-if="isCurrent['request_payment']"></request-payment>
               <dump-key-file v-if="isCurrent['dump_as_key_file']"></dump-key-file>
@@ -78,7 +78,7 @@ import RestoreKeyFile from 'controllers/RestoreKeyFile'
 // import RestoreLedger from 'controllers/RestoreLedger'
 import ViewWallet from 'controllers/View'
 import ViewTx from 'controllers/ViewTx'
-import SafeSend from 'controllers/SafeSend'
+// import SafeSend from 'controllers/SafeSend'
 import Send from 'controllers/Send'
 import RequestPayment from 'controllers/RequestPayment'
 import DumpKeyFile from 'controllers/DumpKeyFile'
@@ -118,7 +118,7 @@ export default {
         { divider: true, name: 'wallet' },
         { icon: 'account_balance_wallet', name: 'view' },
         { icon: 'list', name: 'transactions' },
-        { icon: 'security', name: 'safe_send' },
+        // { icon: 'security', name: 'safe_send' },
         { icon: 'repeat', name: 'send' },
         { icon: 'undo', name: 'request_payment' },
         { icon: 'cloud_download', name: 'dump_as_key_file' },
@@ -143,7 +143,7 @@ export default {
         view: this.mode === 'offline' || !this.wallet,
         transactions: this.mode === 'offline' || !this.wallet,
         wallet: this.mode === 'offline' && !this.wallet,
-        safe_send: this.mode === 'offline' && !this.wallet,
+        // safe_send: this.mode === 'offline' && !this.wallet,
         send: this.mode === 'offline' || !this.wallet,
         request_payment: !this.wallet,
         dump_as_key_file: !this.wallet || !this.wallet.getHasPrivKey(),
@@ -170,7 +170,7 @@ export default {
     // RestoreLedger,
     ViewWallet,
     ViewTx,
-    SafeSend,
+    // SafeSend,
     Send,
     RequestPayment,
     DumpKeyFile,

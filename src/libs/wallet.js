@@ -12,7 +12,7 @@ let network = {}
 switch (config.getNetwork())
 {
   case 'testnet':
-    network = sirius.networks.sirius_testnet
+    network = sirius.networks.sirius
     break
   case 'mainnet':
     network = sirius.networks.sirius
@@ -67,8 +67,8 @@ export default class Wallet {
 
   async setInfo() {
     const info = await server.currentNode().getInfo(this.info.address)
-    this.info.balance = info.balance + unit
-    this.info.unconfirmedBalance = info.unconfirmedBalance + unit
+    this.info.balance = info.balance + ' ' + unit
+    this.info.unconfirmedBalance = info.unconfirmedBalance + ' ' + unit
   }
 
   async setErc20() {
