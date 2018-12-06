@@ -1,6 +1,6 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer permanent clipped app>
+  <v-app dark :style="{ 'background-color': '#232e41' }">
+    <v-navigation-drawer permanent clipped app :style="{ 'background-color': '#232e41' }">
       <v-list>
         <template v-for="(item, i) in menu">
           <v-divider dark v-if="item.divider" class="my-4" :key="i" v-show="!notShow[item.name]"></v-divider>
@@ -9,7 +9,7 @@
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title class="grey--text">
+              <v-list-tile-title class="white--text">
                 {{ $t('common.menu.' + item.name) }}
               </v-list-tile-title>
             </v-list-tile-content>
@@ -19,14 +19,14 @@
     </v-navigation-drawer>
     <v-toolbar :class="headerClass" app fixed clipped-left>
       <span class="title">
-        <i class="sirius-icon sirius-icon-logo"></i>
-        <span class="text">SIRX</span>
-        <span @click="changeView('settings')">
+        <img src="./assets/images/logo.png" alt=""/>
+        <span class="text">Sirius Web Wallet</span>
+        <!-- <span @click="changeView('settings')">
           --{{ $t('common.' + network) }}
-        </span>
-        <v-btn flat @click="changeView('settings')" v-if="mode !== 'normal'">
+        </span> -->
+        <!-- <v-btn flat @click="changeView('settings')" v-if="mode !== 'normal'">
           {{ $t('common.mode.' + mode) }}
-        </v-btn>
+        </v-btn> -->
       </span>
     </v-toolbar>
     <main>
@@ -40,7 +40,7 @@
               <restore-wif @restored="setWallet" v-show="isCurrent['restore_from_wif']"></restore-wif>
               <restore-mobile @restored="setWallet" v-show="isCurrent['restore_from_mobile']"></restore-mobile>
               <restore-key-file @restored="setWallet" v-show="isCurrent['restore_from_key_file']"></restore-key-file>
-              <restore-ledger @restored="setWallet" v-if="isCurrent['restore_from_ledger']"></restore-ledger>
+              <!-- <restore-ledger @restored="setWallet" v-if="isCurrent['restore_from_ledger']"></restore-ledger> -->
               <view-wallet :view="isCurrent['view']" v-if="isCurrent['view']"></view-wallet>
               <view-tx :view="isCurrent['transactions']" v-if="isCurrent['transactions']"></view-tx>
               <safe-send @send="setWallet" v-if="isCurrent['safe_send']"></safe-send>
@@ -75,7 +75,7 @@ import RestoreWallet from 'controllers/Restore'
 import RestoreWif from 'controllers/RestoreWif'
 import RestoreMobile from 'controllers/RestoreMobile'
 import RestoreKeyFile from 'controllers/RestoreKeyFile'
-import RestoreLedger from 'controllers/RestoreLedger'
+// import RestoreLedger from 'controllers/RestoreLedger'
 import ViewWallet from 'controllers/View'
 import ViewTx from 'controllers/ViewTx'
 import SafeSend from 'controllers/SafeSend'
@@ -114,7 +114,7 @@ export default {
         { icon: 'create', name: 'restore_from_wif' },
         { icon: 'phonelink_lock', name: 'restore_from_mobile' },
         { icon: 'cloud_upload', name: 'restore_from_key_file' },
-        { icon: 'flip_to_front', name: 'restore_from_ledger' },
+        // { icon: 'flip_to_front', name: 'restore_from_ledger' },
         { divider: true, name: 'wallet' },
         { icon: 'account_balance_wallet', name: 'view' },
         { icon: 'list', name: 'transactions' },
@@ -139,7 +139,7 @@ export default {
     },
     notShow() {
       return {
-        restore_from_ledger: this.network !== 'mainnet',
+        // restore_from_ledger: this.network !== 'mainnet',
         view: this.mode === 'offline' || !this.wallet,
         transactions: this.mode === 'offline' || !this.wallet,
         wallet: this.mode === 'offline' && !this.wallet,
@@ -155,7 +155,7 @@ export default {
       }
     },
     headerClass() {
-      return this.mode === 'normal' ? 'cyan' : 'orange'
+      return this.mode === 'normal' ? 'blue-grey darken-1' : 'orange'
     }
   },
   components: {
@@ -167,7 +167,7 @@ export default {
     RestoreWif,
     RestoreMobile,
     RestoreKeyFile,
-    RestoreLedger,
+    // RestoreLedger,
     ViewWallet,
     ViewTx,
     SafeSend,

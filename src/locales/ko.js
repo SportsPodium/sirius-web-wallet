@@ -6,8 +6,8 @@ export default {
     copy: '복사',
     next: '다음',
     question_mark: '? ',
-    testnet: 'Testnet',
-    mainnet: 'Mainnet',
+    testnet: ' Web Wallet',
+    mainnet: ' Web Wallet',
     menu: {
       create: '새 지갑 생성',
       create_from_mnemonic: '니모닉에서 생성',

@@ -18,7 +18,7 @@
               bottom
             ></v-select>
           </v-flex>
-          <v-flex xs6>
+          <!-- <v-flex xs6>
             <v-subheader>{{ $t('config.network') }}</v-subheader>
           </v-flex>
           <v-flex xs6>
@@ -29,7 +29,7 @@
               single-line
               bottom
             ></v-select>
-          </v-flex>
+          </v-flex> -->
           <v-flex xs6>
             <v-subheader>{{ $t('config.mode') }}</v-subheader>
           </v-flex>

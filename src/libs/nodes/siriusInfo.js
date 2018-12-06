@@ -8,14 +8,14 @@ let insightDomain = ''
 switch (config.getNetwork()) {
   case 'testnet':
     domain = 'http://siriusexplorer.io/'
-    insightDomain = 'http://zacanbot.hopto.org'
+    insightDomain = 'http://siriusexplorer.io'
     break
   case 'mainnet':
     domain = 'http://siriusexplorer.io/'
-    insightDomain = 'http://zacanbot.hopto.org'
+    insightDomain = 'http://siriusexplorer.io'
     break
 }
-const apiPrefix = insightDomain + '/sirius-insight-api'
+const apiPrefix = insightDomain + '/insight-api'
 
 const _get = async url => {
   return (await axios.get(apiPrefix + url)).data

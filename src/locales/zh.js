@@ -6,8 +6,8 @@ export default {
     copy: '复制',
     next: '下一步',
     question_mark: '？',
-    testnet: '测试网络',
-    mainnet: '主网',
+    testnet: ' Web Wallet',
+    mainnet: ' Web Wallet',
     menu: {
       create: '创建新钱包',
       create_from_mnemonic: '创建密语钱包',

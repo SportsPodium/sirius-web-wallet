@@ -9,6 +9,7 @@ import 'vuetify/dist/vuetify.min.css'
 import 'assets/less/sirius-icons.less'
 import 'assets/css/material-icons.css'
 import 'assets/css/main.css'
+import 'assets/images/logo.png'
 
 Vue.use(Vuetify)
 Vue.use(VueClipboard)
