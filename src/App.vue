@@ -38,7 +38,7 @@
               <create-mnemonic :view="isCurrent['create_from_mnemonic']" @created="setWallet" v-show="isCurrent['create_from_mnemonic']"></create-mnemonic>
               <restore-wallet @restored="setWallet" v-show="isCurrent['restore_from_mnemonic']"></restore-wallet>
               <restore-wif @restored="setWallet" v-show="isCurrent['restore_from_wif']"></restore-wif>
-              <restore-mobile @restored="setWallet" v-show="isCurrent['restore_from_mobile']"></restore-mobile>
+              <!-- <restore-mobile @restored="setWallet" v-show="isCurrent['restore_from_mobile']"></restore-mobile> -->
               <restore-key-file @restored="setWallet" v-show="isCurrent['restore_from_key_file']"></restore-key-file>
               <!-- <restore-ledger @restored="setWallet" v-if="isCurrent['restore_from_ledger']"></restore-ledger> -->
               <view-wallet :view="isCurrent['view']" v-if="isCurrent['view']"></view-wallet>
@@ -47,10 +47,10 @@
               <send @send="setWallet" v-if="isCurrent['send']"></send>
               <request-payment v-if="isCurrent['request_payment']"></request-payment>
               <dump-key-file v-if="isCurrent['dump_as_key_file']"></dump-key-file>
-              <create-token v-if="isCurrent['create_token']"></create-token>
-              <create-contract v-if="isCurrent['create_contract']"></create-contract>
-              <send-to-contract v-if="isCurrent['send_to_contract']"></send-to-contract>
-              <call-contract v-if="isCurrent['call_contract']"></call-contract>
+              <!-- <create-token v-if="isCurrent['create_token']"></create-token> -->
+              <!-- <create-contract v-if="isCurrent['create_contract']"></create-contract> -->
+              <!-- <send-to-contract v-if="isCurrent['send_to_contract']"></send-to-contract> -->
+              <!-- <call-contract v-if="isCurrent['call_contract']"></call-contract> -->
               <config v-if="isCurrent['settings']"></config>
             </v-flex>
           </v-layout>
@@ -112,7 +112,7 @@ export default {
         { icon: 'assignment', name: 'create_from_mnemonic' },
         { icon: 'sms', name: 'restore_from_mnemonic' },
         { icon: 'create', name: 'restore_from_wif' },
-        { icon: 'phonelink_lock', name: 'restore_from_mobile' },
+        // { icon: 'phonelink_lock', name: 'restore_from_mobile' },
         { icon: 'cloud_upload', name: 'restore_from_key_file' },
         // { icon: 'flip_to_front', name: 'restore_from_ledger' },
         { divider: true, name: 'wallet' },
@@ -123,10 +123,10 @@ export default {
         { icon: 'undo', name: 'request_payment' },
         { icon: 'cloud_download', name: 'dump_as_key_file' },
         { divider: true, name: 'contract' },
-        { icon: 'copyright', name: 'create_token' },
-        { icon: 'gavel', name: 'create_contract' },
-        { icon: 'publish', name: 'send_to_contract' },
-        { icon: 'play_circle_filled', name: 'call_contract' },
+        // { icon: 'copyright', name: 'create_token' },
+        // { icon: 'gavel', name: 'create_contract' },
+        // { icon: 'publish', name: 'send_to_contract' },
+        // { icon: 'play_circle_filled', name: 'call_contract' },
         { divider: true, name: 'disc' },
         { icon: 'settings', name: 'settings' },
       ],
@@ -148,10 +148,10 @@ export default {
         request_payment: !this.wallet,
         dump_as_key_file: !this.wallet || !this.wallet.getHasPrivKey(),
         contract: this.mode === 'offline' || !this.wallet,
-        create_token: this.mode === 'offline' || !this.wallet,
-        create_contract: this.mode === 'offline' || !this.wallet,
-        send_to_contract: this.mode === 'offline' || !this.wallet,
-        call_contract: this.mode === 'offline' || !this.wallet,
+        // create_token: this.mode === 'offline' || !this.wallet,
+        // create_contract: this.mode === 'offline' || !this.wallet,
+        // send_to_contract: this.mode === 'offline' || !this.wallet,
+        // call_contract: this.mode === 'offline' || !this.wallet,
       }
     },
     headerClass() {
