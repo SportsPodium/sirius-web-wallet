@@ -46,18 +46,18 @@ dumpprivkey your-private-wallet-address
 
 First open the web wallet. If you already have a Sirius wallet you can import the wallet in one of 3 ways:
 
--  From mnemonic phrase: 12 work phrase
--  From a WIF: private address
--  From a key file (exported from another wallet)
+-  From mnemonic phrase: restores an address from another wallet using 12 seed words
+-  From a WIF: restores an address from a private key
+-  From a key file: restores an address from a Key File created by the Web wallet
 
 You will be prompted to enter the relevant information based on the method you choose.
 
-If you don't have a SIRX wallet yet you can create a new address in one of two ways:
+If you don't have a wallet for the SIRX token yet you can create a new address in one of two ways:
 
--  With a generated key file: creates address and downloads key file
--  With a generated mnemonic phrase: generate 12 word phrase and creates address
+-  With a generated key file: creates a random address and downloads a Key File
+-  With a generated mnemonic phrase: creates 12 random seed words and a random address
 
-You will be prompted to enter a password when creating a new wallet with the passphrase or key file depending on which method you chose. KEEP THIS INFORMATION SAFE! If you lose your password, key file, or passphrase you will LOSE YOUR ADDRESS and all the funds that is currently in it. Make sure you save this information in a safe place. The password is specific to the key file or passphrase. This password is not stored on the blockchain.
+You will be prompted to enter a password when creating a new wallet with the pass phrase or key file depending on which method you chose. KEEP THIS INFORMATION SAFE! If you lose your password, key file, or pass phrase you will LOSE YOUR ADDRESS and all the funds that is currently in it. The only way to relaunch/restore a wallet created with the “Generate new Wallet” option is to “Restore from Key File” by loading the Key File and entering the password. Make sure you save this information in a safe place. The password is specific to the key file or pass phrase. This password is not stored on the blockchain.
 
 ## General use of the web wallet functions
 
@@ -106,3 +106,9 @@ When creating a key file to export your wallet you will be prompted to enter a p
 #### Settings
 
 Settings allows you to change the language of the wallet and also run the wallet in offline mode.
+
+You can also restore the web wallet address back on the core wallet (desktop) simply by importing the private key found on the wallet info page using the console found in the help-->debug window.
+
+```bash
+importprivkey your-private-wallet-address
+```
