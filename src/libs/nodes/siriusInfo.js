@@ -7,15 +7,15 @@ let domain = ''
 let insightDomain = ''
 switch (config.getNetwork()) {
   case 'testnet':
-    domain = 'http://siriusexplorer.io/'
-    insightDomain = 'http://siriusexplorer.io'
+    domain = 'https://zacanbot.hopto.org:3001/'
+    insightDomain = 'https://zacanbot.hopto.org:3001'
     break
   case 'mainnet':
-    domain = 'http://siriusexplorer.io/'
-    insightDomain = 'http://siriusexplorer.io'
+    domain = 'https://zacanbot.hopto.org:3001/'
+    insightDomain = 'https://zacanbot.hopto.org:3001'
     break
 }
-const apiPrefix = insightDomain + '/insight-api'
+const apiPrefix = insightDomain + '/sirius-insight-api'
 
 const _get = async url => {
   return (await axios.get(apiPrefix + url)).data
