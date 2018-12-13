@@ -30,7 +30,7 @@ npm run start
 
 ## Export private key from the Sirius desktop wallet
 
-You will need your private key if you want to import the desktop wallet into the web wallet. With the desktop (Sirius-Core) wallet open, navigate to Help-->Debug Window and then select the Console tab. If your wallet is locked you need to unlock it first.
+You will need your private key if you want to import the desktop wallet into the web wallet. With the desktop (Sirius-Core) wallet open, navigate to the Help-->Debug window and then select the Console tab. If your wallet is locked you need to unlock it first for 5 minutes using this command.
 
 ```bash
 walletpassphrase "your-wallet-address" 300
@@ -60,6 +60,8 @@ If you don't have a Sirius wallet yet, you can create a new address in one of tw
 You will be prompted to enter a password when creating a new wallet with the pass phrase or key file depending on which method you chose. KEEP THIS INFORMATION SAFE! If you lose your password, key file, or pass phrase you will LOSE YOUR ADDRESS and all the funds that is currently in it. The only way to relaunch/restore a wallet created with the “Generate new Wallet” option is to “Restore from Key File” by loading the Key File and entering the password. Make sure you save this information in a safe place. The password is specific to the key file or pass phrase. This password is not stored on the blockchain.
 
 ## General use of the web wallet functions
+
+Once you have restored your wallet, the transactions functions will become available in the menu on the left.
 
 Before you send any coins to the wallet make sure you can close and reopen the wallet with the same receive address. Using the menu option `Dump as Key File` and `Restore from Key File` is a safe way to do this. Using the menu option to restore from seed words to reopen the wallet is riskier because entering a typo for the seed words or password will create an unexpected random address. In order to receive funds you need to supply your public address (first line in wallet info) to the sender. Wait a few minutes for the next block to be published and reload the web wallet to see the new balance. You can also click on the menu option View Wallet Txs to see the receiving transaction. Always double check that you are using the correct address when sending or receiving funds as sending funds to the wrong account cannot be retrieved once processed.
 

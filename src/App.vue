@@ -105,7 +105,7 @@ export default {
   data() {
     return {
       wallet: false,
-      current: 'create',
+      current: 'readme',
       network: config.getNetwork(),
       mode: config.getMode(),
       log: log,
@@ -129,8 +129,9 @@ export default {
         // { icon: 'gavel', name: 'create_contract' },
         // { icon: 'publish', name: 'send_to_contract' },
         // { icon: 'play_circle_filled', name: 'call_contract' },
-        { divider: true, name: 'disc' },
         { icon: 'settings', name: 'readme' },
+        { divider: true, name: 'disc' },
+
         { icon: 'settings', name: 'settings' },
       ],
       notifyList: {}
