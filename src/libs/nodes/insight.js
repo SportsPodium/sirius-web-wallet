@@ -4,10 +4,10 @@ import config from 'libs/config'
 let domain = ''
 switch (config.getNetwork()) {
   case 'testnet':
-    domain = 'http://siriusexplorer.io/'
+    domain = 'https://zacanbot.hopto.org:3001'
     break
   case 'mainnet':
-    domain = 'http://siriusexplorer.io/'
+    domain = 'https://zacanbot.hopto.org:3001'
     break
 }
 const apiPrefix = domain + '/sirius-insight-api'
